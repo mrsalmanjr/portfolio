@@ -26,6 +26,8 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
   const titleProps = useMemo(() => ({
     font: "./soria-font.ttf",
     color: "black",
+    letterSpacing: 0.02,
+    lineHeight: 0.8,
   }), []);
 
   const subtitleProps: Partial<TextProps> = useMemo(() => ({
@@ -50,11 +52,11 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
         y: hovered ? 1.3 : 1,
         z: hovered ? 1.3 : 1,
       }, 0)
-      .to(title.position, { y: hovered ? 0.7 : -0.8 }, 0)
-      .to(textBox.position, { y: hovered ? 0.7 : 0 }, 0)
+      .to(title.position, { y: hovered ? -0.65 : -0.8 }, 0)
+      .to(textBox.position, { y: hovered ? 1.3 : 0.3 }, 0)
       // .to(textBox.scale, { y: hovered ? 1 : 0, x: hovered ? 1 : 0 }, 0)
       .to(textBox, { fillOpacity: hovered ? 1 : 0, duration: 0.4 }, 0)
-      .to(dateGroup.position, { y: hovered ? 2.6 : 1.4 }, 0)
+      .to(dateGroup.position, { y: hovered ? 2.2 : 1.4 }, 0)
       .to(mesh.scale, { y: hovered ? 2 : 1 }, 0)
       .to((mesh as THREE.Mesh).material, { opacity: hovered ? 0.95 : 0.3 }, 0)
       .to(mesh.position, { y: hovered ? 1 : 0 }, 0);
@@ -101,17 +103,17 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
       <group ref={projectRef}>
         <mesh>
           <planeGeometry args={[4.2, 2, 1]} />
-          <meshBasicMaterial color="#FFF" transparent opacity={0.3}/>
+          <meshBasicMaterial color="#FFF" transparent opacity={0.3} />
           {/* <meshPhysicalMaterial transmission={1} roughness={0.3} /> */}
           <Edges color="black" lineWidth={1.5} />
         </mesh>
         <Text
           {...titleProps}
-          position={[-1.9, -0.8, 0.101]}
+          position={[-1.75, -0.8, 0.101]}
           anchorX="left"
           anchorY="bottom"
-          maxWidth={4}
-          fontSize={0.8}>
+          maxWidth={3.5}
+          fontSize={0.38}>
           {project.title}
         </Text>
         <group position={[-1.25, 1.4, 0.01]}>
@@ -123,16 +125,17 @@ const ProjectTile = ({ project, index, position, rotation, activeId, onClick }: 
           <Text
             {...subtitleProps}
             position={[-0.7, 0.2, 0]}
-            fontSize={0.3}>
+            fontSize={0.25}>
             {project.date.toUpperCase()}
           </Text>
         </group>
         <Text
           {...subtitleProps}
-          maxWidth={3.8}
-          position={[-1.9, 2.3, 0.1]}
+          maxWidth={3.5}
+          position={[-1.75, 0.3, 0.1]}
           // scale={[0, 0, 1]}
-          fontSize={0.2}>
+          fontSize={0.11}
+          lineHeight={1.2}>
           {project.subtext}
         </Text>
         {project.url && (

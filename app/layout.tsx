@@ -14,12 +14,12 @@ const vercettiFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mohit Virli ✌️",
-  description: "A frontend developer by profession, a creative at heart.",
-  keywords: "Mohit Virli, Frontend Engineer, React Developer, Three.js, Creative Developer, Web Development, Angular, JavaScript, TypeScript, Portfolio",
-  authors: [{ name: "Mohit Virli" }],
-  creator: "Mohit Virli",
-  publisher: "Mohit Virli",
+  title: "SALMAN KOTABAL | Software Developer",
+  description: "MCA Student | Software Developer | AI & Cloud Enthusiast",
+  keywords: "Salman Kotabal, MCA, Software Developer, Python, AI, Cloud, OCI, React, Warehouse Management System, Worthsolving",
+  authors: [{ name: "Salman Kotabal" }],
+  creator: "Salman Kotabal",
+  publisher: "Salman Kotabal",
   formatDetection: {
     email: false,
     address: false,
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
+    title: "Salman Kotabal - Software Developer",
+    description: "MCA Student | Software Developer | AI & Cloud Enthusiast",
     url: "https://mohitvirli.github.io",
-    siteName: "Mohit Virli's Portfolio",
+    siteName: "Salman Kotabal's Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
+    title: "Salman Kotabal - Software Developer",
+    description: "MCA Student | Software Developer | AI & Cloud Enthusiast",
   },
   verification: {
     google: "GsRYY-ivL0F_VKkfs5KAeToliqz0gCrRAJKKmFkAxBA",
@@ -72,7 +72,7 @@ export default function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics gaId={'G-7WD4HM3XRE'}/>
+      <GoogleAnalytics gaId={'G-7WD4HM3XRE'} />
     </html>
   );
 }
